@@ -1,0 +1,33 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/normalize";
+
+.navbuttons {
+  margin-right: 0;
+  height: 100%;
+  display: flex;
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    height: 100%;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 1px;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $grey-light-1 !important;
+    }
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+  &__scroll {
+    background-color: rgba($color: black, $alpha: 0.5);
+  }
+}

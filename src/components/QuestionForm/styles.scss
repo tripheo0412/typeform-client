@@ -1,0 +1,117 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/normalize";
+@import "../../assets/styles/themes";
+@import "../../assets/styles/animations";
+.submit__wrapper {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: auto;
+  height: 48px;
+}
+.wrapper__screen {
+  opacity: inherit;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  padding-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+.base__root {
+  position: relative;
+  height: 100%;
+  width: 100vw;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.question__wrapper {
+  height: calc(100% - 90px);
+}
+.content__wrapper {
+  height: 50vh;
+  width: 100%;
+  position: relative;
+  max-width: 840px;
+  padding: 50px 70px;
+  margin: 0 auto;
+}
+.question {
+  &__form {
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    height: 100%;
+    z-index: 1;
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: calc(50% - 56px);
+    }
+  }
+
+  &__main {
+    padding-top: 0;
+    padding-bottom: $spacing-01;
+  }
+
+  &__submit {
+    height: calc(50% + 60px);
+    overflow: hidden;
+    outline: 0px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    .submit__content {
+      padding-top: 30px;
+      height: 100%;
+      width: 100%;
+
+      .button {
+        position: relative;
+      }
+    }
+    .submit__text {
+      padding-top: $spacing-01-50;
+    }
+  }
+  &__progressbar {
+    display: flex;
+    align-items: center;
+    padding: 4px 0;
+    width: 100%;
+
+    &--bar {
+      flex: 1;
+    }
+    &--buttons {
+      display: flex;
+      justify-content: center;
+      padding: 0 20px;
+      height: 40px;
+      width: 100px;
+    }
+  }
+}
+
+@include for-phone {
+  .content__wrapper {
+    max-width: 240px;
+  }
+}
+
+@include for-tablet-portait {
+  .content__wrapper {
+    max-width: 640px;
+    height: 100%;
+  }
+}
