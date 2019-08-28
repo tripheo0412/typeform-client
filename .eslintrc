@@ -1,0 +1,9 @@
+{
+  "extends": ["wesbos"],
+  "rules": {
+    "no-plusplus": [2, { "allowForLoopAfterthoughts": true }],
+    "import/no-named-as-default": 0,
+    "no-console": "off",
+    "prefer-destructuring": ["error", { "object": true, "array": true }]
+  }
+}

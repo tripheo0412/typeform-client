@@ -1,1 +1,1 @@
-# typeform-client
+Client side of Typeform clone
